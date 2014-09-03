@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>列表</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<#assign path=request.contextPath /> 
+<link href="${path}/js/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" />
+<link href="${path}/js/ligerUI/skins/ligerui-icons.css" rel="stylesheet" type="text/css" />
+<link href="${path}/js/ligerUI/skins/Gray/css/all.css" rel="stylesheet" type="text/css" />
+<link href="${path}/css/articlelist.css" rel="stylesheet" type="text/css" />
+
+<script src="${path}/js/jquery-1.9.1.js" type="text/javascript"></script>
+<script src="${path}/js/ligerUI/js/core/base.js" type="text/javascript"></script>
+<script src="${path}/js/ligerUI/js/plugins/ligerLayout.js" type="text/javascript"></script>
+<script src="${path}/js/ligerUI/js/plugins/ligerTree.js" type="text/javascript"></script>
+<script src="${path}/js/ligerUI/js/plugins/ligerAccordion.js" type="text/javascript"></script>
+<script src="${path}/js/ligerUI/js/plugins/ligerGrid.js" type="text/javascript"></script>
+<script src="${path}/js/ligerUI/js/plugins/ligerResizable.js" type="text/javascript"></script>
+<script src="${path}/js/ligerUI/js/plugins/ligerDrag.js" type="text/javascript"></script>
+<script src="${path}/js/ligerUI/js/plugins/ligerTab.js" type="text/javascript"></script>
+<script src="${path}/js/ligerUI/js/plugins/ligerDialog.js" type="text/javascript"></script>
+<script src="${path}/js/ligerUI/js/plugins/ligerMenu.js" type="text/javascript"></script>
+<script src="${path}/js/ligerUI/js/plugins/ligerToolBar.js" type="text/javascript"></script>
+<script src="${path}/js/ligerUI/js/plugins/ligerCheckBox.js" type="text/javascript"></script>
+<script src="${path}/js/list.js" type="text/javascript"></script>
+<script type="text/javascript">
+var basePath="${path}";
+</script>
+</head>
+<body style="padding: 10px">
+	<div id="layout1">
+		<div id="accordion1" position="left">
+			<div title="功能列表">
+				<ul>
+					<li>
+						<a onclick="f_click('addTabItem','文章管理','articleList', '${path}/index.html')" href="####">文章管理</a>
+					</li>
+					<li>
+						<a onclick="f_click('addTabItem','文章管理','articleList2','http://www.baidu.com')" href="####">搜索</a>
+					</li>
+					<li>
+						<a onclick="f_click('addTabItem','文章管理','articleList3','http://www.baidu.com')" href="####">搜索</a>
+					</li>
+					<li>
+						<a onclick="f_click('addTabItem','文章管理','articleList3','http://www.baidu.com')" href="####">搜索</a>
+					</li>
+					<li>
+						<a onclick="f_click('addTabItem','文章管理','articleList4','http://www.baidu.com')" href="####">搜索</a>
+					</li>
+				</ul>
+			</div>
+			<div title="列表">
+				<ul>
+					<li>列表一</li>
+					<li>列表二</li>
+				</ul>
+			</div>
+			<div title="其他" style="padding: 10px">其他内容</div>
+			<div style="display: none;"></div>
+		</div>
+		<div id="centerDiv" position="center">
+			<!-- 标签页 -->	
+			<div id="navtab1" style="width:100%; border:0px solid #A3C0E8; ">
+				<div tabid="articleList" id="tab1_div" title="文章管理" showClose="true" lselected="true" >
+					<div id="searchbar">
+					    作者：<input id="searchAuthor" name="author" type="text" />
+					    栏目：<select name="type1" id="searchtype1" style="width: 150px">
+								<option value="0">——请选择——</option>
+								<#list type1Map?keys as type>
+									<option value="${type}">${type1Map[type]}</option>
+								</#list>
+							</select>
+					    <input id="btnOK" type="button" value="查询" onclick="f_search()" />
+					</div>
+			
+				    <div class="l-loading" style="display: block" id="pageloading">
+				    </div>
+				    <div id="maingrid4" style="margin: 0; padding: 0">
+				    </div>
+				    <div style="display: none;">
+				    </div>
+				</div>
+				<div tabid="articleList2" id="tab2_div" title="我的主页2" showClose="true">
+					<div id="maingrid2" style="margin:10px; height:300px;">我的主页2</div>
+				</div>
+			</div>
+		</div>
+<!-- 		<div position="right"></div> -->
+		<div position="top">
+			<h4 align="center">文章管理后台</h4>
+		</div>
+		<div position="bottom" style="height:32px; line-height:32px; text-align:center;">
+			Copyright © 2011-2014 www.wym.com
+		</div>
+	</div>
+	<div style="display: none;"></div>
+</body>
+</html>

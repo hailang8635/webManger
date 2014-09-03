@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>操作成功</title>
+<script type="text/javascript">
+function toclose(){
+	var second = 3;
+	//setTimeout(toclose(), 1000);
+	document.getElementById("second").innerHTML=second;
+	setInterval(function(){
+		second--;
+		if(second==0){
+			closeTab();
+		}
+		document.getElementById("second").innerHTML=second;
+	}, 1000);
+	
+};
+function closeTab(){
+	window.parent.navtab.selectTabItem("articleList");
+	//加载数据
+	//window.parent.reloadData();
+	window.parent.f_search();//搜索
+	window.parent.navtab.removeTabItem('${tabId}');
+}
+</script>
+</head>
+<body onload="toclose()">
+恭喜您！${msg}
+<br/>
+<span id="second"></span>后<a href="javascript:void(0)" onclick="closeTab()">关闭本页面</a>
+</body>
+</html>
