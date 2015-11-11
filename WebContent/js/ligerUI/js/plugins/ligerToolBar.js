@@ -1,9 +1,9 @@
-﻿﻿/**
+﻿/**
 * jQuery ligerUI 1.2.4
 * 
 * http://ligerui.com
 *  
-* Author daomi 2014 [ gd_star@163.com ] 
+* Author daomi 2014 [  ] 
 * 
 */
 (function ($)
