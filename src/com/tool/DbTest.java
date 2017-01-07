@@ -2,11 +2,11 @@ package com.tool;
 import java.io.IOException;
 import java.util.Date;
 
+import org.junit.Test;
+
 import com.entity.Article;
 
-import junit.framework.TestCase;
-
-public class DbTest extends TestCase {
+public class DbTest {
 	public void testQuery(){
 /*		DbUtils db = new DbUtils();
 		String sql = "select * from article where 1=1";
@@ -21,6 +21,7 @@ public class DbTest extends TestCase {
 		}*/
 	}
 	
+	@Test
 	public void testJson(){
 		Article article = new Article();
 		article.setAuthor("abc");
