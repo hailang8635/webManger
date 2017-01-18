@@ -107,11 +107,10 @@
 	    </dependency>
 		<!-- com end-->
 
-	    <!-- Mysql -->
 		<dependency>
 		  <groupId>dom4j</groupId>
 		  <artifactId>dom4j</artifactId>
-		  <version>1.6.1</version>
+		  <version>1.6</version>
 		</dependency>
 		
 		<!-- javax start-->
@@ -171,7 +170,7 @@
 	    <dependency>
 	        <groupId>mysql</groupId>
 	        <artifactId>mysql-connector-java</artifactId>
-	        <version>5.1.29</version>
+	        <version>5.1.40</version>
 	    </dependency>
 	    
 		<dependency>
@@ -371,7 +370,8 @@
 			<scope>test</scope>
 		</dependency>
 		
-<!-- 		<dependency>
+        <!-- 		
+        <dependency>
 		  <groupId>org.springframework</groupId>
 		  <artifactId>org.springframework.web</artifactId>
 		  <version>${org.springframework.version}</version>
@@ -380,16 +380,17 @@
 		  <groupId>org.springframework</groupId>
 		  <artifactId>org.springframework.web.servlet</artifactId>
 		  <version>${org.springframework.version}</version>
-		</dependency> -->
+		</dependency> 
+		-->
 		<!-- Spring3.1.1 -->
 		
-				<!-- 
+	    <!-- 
 		<dependency>
 		  <groupId>standard</groupId>
 		  <artifactId>standard</artifactId>
 		  <version>1.2.3</version>
 		</dependency>
-			 -->
+		 -->
 	
 		<dependency>
 			<groupId>org.jasig.cas.client</groupId>
